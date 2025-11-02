@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Mi sitio · Recursos y Materiales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{--bg:#0f172a;--card:#111827;--fg:#e5e7eb;--acc:#60a5fa;}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#0b1020,#0f172a);}
+    header{padding:32px 20px;text-align:center;color:var(--fg)}
+    header h1{margin:0 0 8px;font-size:clamp(24px,4vw,36px)}
+    header p{opacity:.85;margin:0}
+    nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:12px 0}
+    nav a{padding:8px 12px;border-radius:999px;background:#1f2937;color:var(--fg);text-decoration:none}
+    main{max-width:1000px;margin:16px auto;padding:0 16px 48px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:16px;padding:18px;color:var(--fg);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+    .card h3{margin:0 0 8px}
+    .card a{color:var(--acc);text-decoration:none}
+    footer{max-width:1000px;margin:0 auto 40px;color:#94a3b8;text-align:center}
+    .small{font-size:.9rem;opacity:.9}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Recursos del curso / proyecto</h1>
+    <p class="small">Aquí encontrarás todo el material: PDF, presentaciones, enlaces y actividades.</p>
+    <nav>
+      <a href="#programa">Programa</a>
+      <a href="#clases">Clases</a>
+      <a href="#lecturas">Lecturas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="programa" class="card">
+      <h3>Programa</h3>
+      <p>Resumen y objetivos. <a href="docs/programa.pdf">Descargar PDF</a></p>
+    </section>
+
+    <section id="clases" class="card">
+      <h3>Clases y diapositivas</h3>
+      <ul>
+        <li>Clase 1 – Introducción (<a href="slides/clase1.pdf">PDF</a>)</li>
+        <li>Clase 2 – Conceptos clave (<a href="slides/clase2.pdf">PDF</a>)</li>
+      </ul>
+    </section>
+
+    <section id="lecturas" class="card">
+      <h3>Lecturas y enlaces</h3>
+      <ul>
+        <li><a href="docs/lectura1.pdf">Lectura 1 (PDF)</a></li>
+        <li><a href="https://example.com">Artículo externo</a></li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="card">
+      <h3>Contacto</h3>
+      <p>Consultas: <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 · Actualizado por <strong>Tu Nombre</strong></p>
+  </footer>
+</body>
+</html>
