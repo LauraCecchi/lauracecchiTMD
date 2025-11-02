@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Mi sitio · Recursos y Materiales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{
+      --bg:#eaf2fa;
+      --card:#ffffff;
+      --fg:#1e293b;
+      --acc:#1d4ed8;
+      --acc-light:#3b82f6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,Segoe UI,Roboto,Arial;
+      background:linear-gradient(180deg,#dce7f5,#eaf2fa);
+      color:var(--fg);
+    }
+    header{
+      padding:32px 20px;
+      text-align:center;
+      color:var(--fg);
+    }
+    header h1{margin:0 0 8px;font-size:clamp(24px,4vw,36px)}
+    header p{opacity:.85;margin:0}
+    nav{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin:20px 0;
+    }
+    nav a{
+      padding:8px 14px;
+      border-radius:999px;
+      background:var(--acc-light);
+      color:white;
+      text-decoration:none;
+      transition:background .2s;
+    }
+    nav a:hover{background:var(--acc);}
+    main{
+      max-width:1000px;
+      margin:16px auto;
+      padding:0 16px 48px;
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    }
+    .card{
+      background:var(--card);
+      border:1px solid #cbd5e1;
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 6px 20px rgba(0,0,0,.1);
+    }
+    .card h3{margin:0 0 8px;color:var(--acc);}
+    .card a{color:var(--acc);text-decoration:none;}
+    .card a:hover{text-decoration:underline;}
+    footer{
+      max-width:1000px;
+      margin:0 auto 40px;
+      color:#475569;
+      text-align:center;
+    }
+    .small{font-size:.9rem;opacity:.9;}
+
+    /* ---- Cartel Telegram ---- */
+    .telegram-banner{
+      background:var(--acc-light);
+      color:white;
+      text-align:center;
+      padding:18px 12px;
+      margin:16px auto 32px;
+      border-radius:12px;
+      max-width:700px;
+      box-shadow:0 4px 15px rgba(0,0,0,.15);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .telegram-banner svg{
+      width:32px;
+      height:32px;
+      flex:0 0 auto;
+    }
+    .telegram-banner a{
+      background:white;
+      color:var(--acc);
+      font-weight:600;
+      text-decoration:none;
+      padding:6px 14px;
+      border-radius:8px;
+      transition:background .2s;
+    }
+    .telegram-banner a:hover{
+      background:#e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Recursos del curso / proyecto</h1>
+    <p class="small">Aquí encontrarás todo el material: PDF, presentaciones, enlaces y actividades.</p>
+    <nav>
+      <a href="#programa">Programa</a>
+      <a href="#clases">Clases</a>
+      <a href="#lecturas">Lecturas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Cartel de Telegram -->
+  <div class="telegram-banner">
+    <svg aria-hidden="true" viewBox="0 0 240 240">
+      <circle cx="120" cy="120" r="120" fill="#229ED9"></circle>
+      <path fill="#fff" d="M175 70c-3 1-6 2-9 3l-99 38c-7 3-7 11-1 13l25 8 9 29c1 4 6 5 9 2l14-13 30 22c4 3 9 1 10-4l18-89c1-5-3-9-6-9zM97 122l63-39c2-1 4 1 2 3l-52 48c-2 2-3 5-3 8l-1 9-9-28c0-1 0-1 0-1z"></path>
+    </svg>
+    <span><strong>¡Sumate al grupo de Telegram!</strong></span>
+    <a href="https://t.me/tugrupo" target="_blank">Unirme</a>
+  </div>
+
+  <main>
+    <section id="programa" class="card">
+      <h3>Programa</h3>
+      <p>Resumen y objetivos. <a href="docs/programa.pdf">Descargar PDF</a></p>
+    </section>
+
+    <section id="clases" class="card">
+      <h3>Clases y diapositivas</h3>
+      <ul>
+        <li>Clase 1 – Introducción (<a href="slides/clase1.pdf">PDF</a>)</li>
+        <li>Clase 2 – Conceptos clave (<a href="slides/clase2.pdf">PDF</a>)</li>
+      </ul>
+    </section>
+
+    <section id="lecturas" class="card">
+      <h3>Lecturas y enlaces</h3>
+      <ul>
+        <li><a href="docs/lectura1.pdf">Lectura 1 (PDF)</a></li>
+        <li><a href="https://example.com">Artículo externo</a></li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="card">
+      <h3>Contacto</h3>
+      <p>Consultas: <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 · Actualizado por <strong>Tu Nombre</strong></p>
+  </footer>
+</body>
+</html>
