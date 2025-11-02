@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Extracción, Preparación y Almacenamiento de Datos · TMD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{
+      --bg:#f7fafc; --fg:#0f172a; --muted:#475569;
+      --card:#ffffff; --line:#e2e8f0; --acc:#1d4ed8; --acc2:#3b82f6;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--fg);line-height:1.55}
+    header{
+      background:linear-gradient(180deg,#e9f2ff,#f7fbff);
+      border-bottom:1px solid var(--line);
+      padding:26px 16px; position:sticky; top:0; z-index:10;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:0 14px}
+    .title{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .title img{height:42px}
+    .title h1{font-size:clamp(22px,3.5vw,30px);margin:0}
+    .subtitle{margin:4px 0 0;color:var(--muted)}
+    main{display:grid;grid-template-columns:280px 1fr;gap:18px;max-width:1100px;margin:20px auto;padding:0 14px}
+    @media (max-width:960px){main{grid-template-columns:1fr}}
+    .toc{
+      position:sticky; top:86px; align-self:start; background:var(--card);
+      border:1px solid var(--line); border-radius:12px; padding:14px;
+    }
+    .toc h3{margin:0 0 10px;font-size:16px;color:var(--muted)}
+    .toc ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .toc a{color:var(--acc);text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .card{
+      background:var(--card); border:1px solid var(--line); border-radius:12px;
+      padding:18px; margin-bottom:16px; box-shadow:0 6px 18px rgba(0,0,0,.05);
+    }
+    .card h2{margin:0 0 10px;color:var(--acc)}
+    .muted{color:var(--muted)}
+    .btn{
+      display:inline-block; padding:8px 12px; border-radius:10px; text-decoration:none; font-weight:600;
+      background:var(--acc2); color:#fff; border:1px solid #1e40af;
+    }
+    .btn:hover{filter:brightness(0.95)}
+    .grid{display:grid;gap:10px}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .list-tight li{margin:6px 0}
+    footer{max-width:1100px;margin:20px auto 40px;padding:0 14px;color:var(--muted);text-align:center}
+    .badge{display:inline-block;padding:4px 8px;border-radius:8px;background:#eef2ff;color:#3730a3;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="title">
+        <!-- Opcional: logo -->
+        <!-- <img src="img/logo.png" alt="Logo"> -->
+        <div>
+          <h1>Extracción, Preparación y Almacenamiento de Datos</h1>
+          <p class="subtitle">Material del curso · Universidad Nacional del Comahue</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Índice -->
+    <aside class="toc">
+      <h3>Contenido</h3>
+      <ul>
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#contenidos">Contenidos mínimos</a></li>
+        <li><a href="#teoria">Teoría</a></li>
+        <li><a href="#practica">Práctica</a></li>
+      </ul>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0">
+      <ul>
+        <li><a href="docs/ProgramaTDM.pdf">Programa de la Asignatura (PDF)</a></li>
+        <li><a href="https://github.com/lauracecchi" target="_blank">Repositorio</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido -->
+    <section>
+      <article id="introduccion" class="card">
+        <h2>Introducción</h2>
+        <p>
+          En esta asignatura conoceremos y profundizaremos la base metodológica para el desarrollo de aplicaciones
+          de Big Data, junto con tendencias tecnológicas y conceptuales basadas en el almacenamiento y procesamiento de los datos.
+        </p>
+        <p>
+          El objetivo es comprender y aplicar, con las tecnologías brindadas, técnicas utilizadas en las
+          actividades principales de las metodologías de Análisis de Datos.
+        </p>
+        <p><a class="btn" href="docs/ProgramaTDM.pdf">📄 Programa (PDF)</a></p>
+      </article>
+
+      <article id="contenidos" class="card">
+        <h2>Contenidos mínimos</h2>
+        <ul class="list-tight">
+          <li>Captura y fuentes de datos (web, APIs, formatos).</li>
+          <li>Almacenamiento en bases relacionales y no relacionales. Repositorios NoSQL.</li>
+          <li>Depósitos y lagos de datos. Integración y agregación.</li>
+          <li>Limpieza: valores faltantes, duplicados, atípicos e inconsistencias.</li>
+        </ul>
+      </article>
+
+      <article id="teoria" class="card">
+        <h2>Teoría</h2>
+        <p class="muted">El Proceso de Análisis de Datos incluye varias actividades; en esta asignatura abordamos las tres primeras.</p>
+
+        <!-- Reemplazá las imágenes por las tuyas si querés -->
+        <div class="grid grid-2">
+          <div class="card" style="padding:14px">
+            <span class="badge">Mapa general</span>
+            <p style="margin:8px 0 0">[Colocá aquí una imagen/figura: <code>img/proceso_general.png</code>]</p>
+          </div>
+          <div class="card" style="padding:14px">
+            <span class="badge">Foco de la materia</span>
+            <p style="margin:8px 0 0">[Colocá aquí una imagen/figura: <code>img/primeras_tres.png</code>]</p>
+          </div>
+        </div>
+
+        <p style="margin-top:10px">Material por unidad:</p>
+        <ul class="list-tight">
+          <li><strong>Unidad I:</strong> Identificación y Recolección de Datos — <a href="slides/u1_teoria.pdf">Teoría (PDF)</a></li>
+          <li><strong>Unidad II:</strong> Preparación de Datos — <a href="slides/u2_teoria.pdf">Teoría (PDF)</a></li>
+          <li><strong>Unidad III:</strong> Almacenamiento de Datos — <a href="slides/u3_teoria.pdf">Teoría (PDF)</a></li>
+        </ul>
+
+        <p>Plantillas y resúmenes: <a href="docs/plantillas_resumen.zip">ZIP</a></p>
+      </article>
+
+      <article id="practica" class="card">
+        <h2>Práctica</h2>
+        <p>
+          Para el trabajo práctico, la Facultad brinda un entorno Jupyter accesible con credenciales.
+          Ingresá en: <a href="https://jupyter.fi.uncoma.edu.ar/" target="_blank">https://jupyter.fi.uncoma.edu.ar/</a>
+        </p>
+        <p>
+          Las entregas se realizan en PEDCO: <a href="https://pedco.uncoma.edu.ar/" target="_blank">https://pedco.uncoma.edu.ar/</a>
+        </p>
+
+        <ul class="list-tight">
+          <li><a href="practicos/p1.pdf">Práctico 1: Colección de datos (PDF)</a></li>
+          <li><a href="practicos/p2.pdf">Práctico 2: Preparación de datos (PDF)</a></li>
+          <li><a href="practicos/p3.pdf">Práctico 3: Almacenamiento (PDF)</a></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 · Cátedra TMD · UNCo · Sitio generado para GitHub Pages</p>
+  </footer>
+</body>
+</html>
